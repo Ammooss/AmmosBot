@@ -11,6 +11,11 @@
 		console.log("AmmosBot est prêt :D")
 	})
 
+//Fonction qui affiche un message dans "#bienvenue" lors de l'arrivé d'un nouveau membre
+	Bot.on("guildMemberAdd", function(newmember){
+		newmember.guild.channels.find("name","bienvenue").send(`:flag_fr: Bienvenue ${newmember}, je t'invite à entrer la commande "a!Français" (Si tu parle français), "a!English" (Si tu parle anglais) ou "a!Español"(Si tu parle espagnol). Si tu parle plusieurs langues il te suffit de rajoute un "&" suivi de la seconde langue exemple : "a!Français&English", "a!Français&Español", "a!Français&English&Español". N'oublies pas d'aller lire les règles ensuite. :flag_fr: \n \n:flag_gb: Welcome ${newmember}, I invite you to enter the command "a!Français" (If you speak french), "a!English" (If you speak english) or "a!Español" (If you speak spanish). If you speak several languages ​​you just need to add a "&" followed by the second language example: "a!Français&English", "a!English&Español", "a!Français&English&Español". Do not forget to read the rules after. :flag_gb: \n \n:flag_es: Bienvenido ${newmember}, te invito a ingresar el comando "a!Français" (si habla francés), "a!English" (si habla inglés) o "a!Español" (si habla español). Si habla varios idiomas, solo tiene que agregar un "&" seguido del segundo idioma ejemplo: "a!Français&Español", "a!English&Español", "a!Français&English&Español". No te olvides de leer las reglas después. :flag_es:`)
+	})
+
 //Fonction message qui récupère une commande et y répond ou effectue une action envers la personne qui a rentré la commande
 	Bot.on("message", function(message){
 		//Fonction intéractives principales du bot
@@ -97,9 +102,4 @@
 				message.member.addRole(reglas)
 				return message.channel.send(":white_check_mark: Reglas Aceptadas :flag_es:")
 			}
-	})
-
-//Fonction qui affiche un message dans "#bienvenue" lors de l'arrivé d'un nouveau membre
-	Bot.on("guildMemberAdd", function(newmember){
-		newmember.guild.channels.find("name","bienvenue").send(`:flag_fr: Bienvenue ${newmember}, je t'invite à entrer la commande "a!Français" (Si tu parle français), "a!English" (Si tu parle anglais) ou "a!Español"(Si tu parle espagnol). Si tu parle plusieurs langues il te suffit de rajoute un "&" suivi de la seconde langue exemple : "a!Français&English", "a!Français&Español", "a!Français&English&Español". N'oublies pas d'aller lire les règles ensuite. :flag_fr: \n \n:flag_gb: Welcome ${newmember}, I invite you to enter the command "a!Français" (If you speak french), "a!English" (If you speak english) or "a!Español" (If you speak spanish). If you speak several languages ​​you just need to add a "&" followed by the second language example: "a!Français&English", "a!English&Español", "a!Français&English&Español". Do not forget to read the rules after. :flag_gb: \n \n:flag_es: Bienvenido ${newmember}, te invito a ingresar el comando "a!Français" (si habla francés), "a!English" (si habla inglés) o "a!Español" (si habla español). Si habla varios idiomas, solo tiene que agregar un "&" seguido del segundo idioma ejemplo: "a!Français&Español", "a!English&Español", "a!Français&English&Español". No te olvides de leer las reglas después. :flag_es:`)
 	})
