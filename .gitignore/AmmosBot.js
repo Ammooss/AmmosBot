@@ -6,7 +6,7 @@
 //Déclaration des constantes de l'API Discord.js, du Client et du Token
 	const Discord = require("discord.js")
 	const Bot = new Discord.Client()
-	Bot.login("process.env.TOKEN")
+	Bot.login(process.env.TOKEN)
 
 //Démarage du bot, Attribution d'une activité et Message de lancement
 	Bot.on("ready", function (start) {
