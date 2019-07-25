@@ -1,14 +1,23 @@
 {
-  "name": "botdiscord",
+  "name": "ammosbot",
   "version": "1.0.0",
-  "description": "AmmosBot for Discord",
+  "description": "AmmosBot est un Bot Discord créer par Ammos pour son serveur discord",
   "main": "AmmosBot.js",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ammooss/AmmosBot.git"
+  },
   "author": "Ammos",
   "license": "ISC",
-  "dependencies": {
-    "discord.js": "^11.3.2"
-  }
+  "bugs": {
+    "url": "https://github.com/Ammooss/AmmosBot/issues"
+  },
+  "homepage": "https://github.com/Ammooss/AmmosBot#readme"
 }
