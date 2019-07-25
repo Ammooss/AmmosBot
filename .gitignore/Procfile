@@ -1,1 +1,1 @@
-worker: node AmmosBot
+worker: node AmmosBot.js
